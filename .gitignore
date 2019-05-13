@@ -1,0 +1,14 @@
+/node_modules/**
+/npm-debug.log
+.DS_Store
+*.sample
+Thumbs.db
+npm-debug.log
+log/
+index.md
+index2.md
+index3.md
+index4.md
+index5.md
+index6.md
+/images/**
