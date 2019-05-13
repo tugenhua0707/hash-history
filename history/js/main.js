@@ -6,10 +6,14 @@ class HistoryRoutes {
     
     // 监听popstate事件
     window.addEventListener('popstate', (e) => {
-      console.log(e);
-      const path = e.state && e.state.path;
+      const path = this.getState();
       this.routes[path] && this.routes[path]();
     });
+  }
+  // 获取路由路径
+  getState() {
+    const path = window.location.pathname;
+    return path ? path : '/';
   }
   route(path, callback) {
     this.routes[path] = callback || function() {};
